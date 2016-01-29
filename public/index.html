@@ -1,33 +1,136 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CSS/HTML Workshop with Drivy</title>
+    <title>Adrian R Drivy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <link href="css/mystyle.css" rel="stylesheet">
   </head>
   <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script id="template" type="x-tmpl-mustache">
-      {{#actors}}
-        <div class="actor">
-          <span>{{who}}</span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
+
+
+  <div class="row menu">
+  <div class="col s12 m4 l8 logo"><img src="images/logodrivy.png" alt="" /></div>
+  <div class="col s12 m4 l2 tab"><p class="ptab">About</p></div>
+  <div class="col s12 m4 l2 tab"><p class="ptab">Links</p></div>
+  </div>
+
+    <div class="row cars">
+    <div class="col l4">
+      <div class="card medium car">
+        <div class="card-image">
+          <img width="100px" src="images/car1.jpg"/>
+          <span class="card-title"></span>
         </div>
-      {{/actors}}
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-    <script src="drivy.js"></script>
-    <script src="index.js"></script>
+        <div class="card-content">
+          <h5>Peugeot 306</h5>
+            <div class="divider"></div>
+            <ul>
+              <li>Price per day: 20</li>
+              <li>Price per Km: 0.10</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col l4">
+      <div class="card medium car">
+        <div class="card-image">
+          <img width="100px" src="images/car2.jpg"/>
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content">
+          <h5>RR Sport</h5>
+          <div class="divider"></div>
+            <ul>
+              <li>Price per day: 60</li>
+              <li>Price per Km: 0.30</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+      <div class="col l4">
+        <div class="card medium car">
+          <div class="card-image">
+            <img width="100px" src="images/car3.jpg"/>
+              <span class="card-title"></span>
+          </div>
+          <div class="card-content">
+            <h5>Porsche Boxter</h5>
+          <div class="divider"></div>
+            <ul>
+              <li>Price per day: 100</li>
+              <li>Price per Km: 0.45</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rental" class="dates row">
+        <div  class="col l6">
+          <div class="white">
+            <p>Debut de location :</p>
+            <input class="begin" type="date" placeholder="Rental begin date"/>
+          </div>
+        </div>
+        <div class="col l6">
+          <div class="white">
+          <p>Fin de location :</p>
+          <input class="end" type="date" placeholder="Rental end date"/>
+        </div>
+      </div>
+        <div class="divide col l12"></div>
+        <div class="col l6">
+          <div class="white">
+          <p>Distance : </p>
+          <input class="distance" type="number" placeholder="Distance in km"/>
+        </div>
+      </div>
+        <div class="col l6">
+          <div class="white">
+              <p>Deductible option </p>
+              <input class="option" type="checkbox" placeholder="Deductible option"/>
+        </div>
+      </div>
+      <div class="divide col l12"></div>
+        <div class="col l12 white">
+        <button id="compute" class="sub">Compute</button>
+      </div>
+    </div>
+
+
+      <div class="results">
+      </div>
+
   </body>
 </html>
+
+
+<!-- <div id="car" class="col l2">
+    <input class="model" type="text" placeholder="Car model"/>
+    <input class="price-by-day" type="number" placeholder="Price by day"/>
+    <input class="price-by-km" type="number" placeholder="Price by km"/>
+  </div>
+
+  <div id="rental" class="col l2">
+    <input class="begin" type="date" placeholder="Rental begin date"/>
+    <input class="end" type="date" placeholder="Rental end date"/>
+    <input class="distance" type="number" placeholder="Distance in km"/>
+    <input class="option" type="checkbox" placeholder="Deductible option"/>
+  </div>
+
+  <button id="compute" class="col l2">Compute</button>
+  <div id="actors" class="col l2"></div>
+  <script id="template" type="x-tmpl-mustache">
+    {{#actors}}
+      <div class="actor l1">
+        <span>{{who}}</span>
+        <span>{{type}}</span>
+        <span>{{amount}}</span>
+      </div>
+    {{/actors}}
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="drivy.js"></script>
+  <script src="index.js"></script>
+</div>-->
